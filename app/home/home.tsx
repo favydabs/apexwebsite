@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 // import Image from 'next/image';
 
@@ -108,7 +108,7 @@ import { ChevronLeft, ChevronRight} from 'lucide-react';
 
       {/* Welcome Section */}
       <div className="text-center space-y-4 sm:space-y-6 px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">WELCOME!</h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900">WELCOME!</h2>
         <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
           We provide World-Class Energy, Engineering & Infrastructural Services to the Public and Private Industry related Sectors. We strive to become the leading Energy, Engineering and Infrastructure company in Nigeria and beyond with Competent skills and Motivated Workforce to succeed across the value chain.
         </p>
@@ -123,7 +123,7 @@ import { ChevronLeft, ChevronRight} from 'lucide-react';
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 sm:p-8 rounded-xl md:rounded-2xl shadow-lg">
+        <div className="bg-gradient-to-br from-indigo-50 to-indigo-50 p-6 sm:p-8 rounded-xl md:rounded-2xl shadow-lg">
           <h3 className="text-2xl sm:text-3xl font-bold text-indigo-900 mb-3 sm:mb-4">MISSION</h3>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
             Our mission is to provide unique expertise in developing and executing projects in the energy and infrastructure sectors in Nigeria and other African countries, thereby developing efforts that serve as a backbone for growth.

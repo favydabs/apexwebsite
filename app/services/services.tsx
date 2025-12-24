@@ -1,4 +1,5 @@
-// import Image from "next/image";
+import Image from "next/image";
+import ourservices from "@/public/ourservices.jpg";
 
 const Services = () => {
   const services = [
@@ -12,6 +13,17 @@ const Services = () => {
     "Contract Planning",
     "Solar Power Installation",
     "Optic Fiber Installation, Connectivity, FTTH",
+    "Road Construction & Maintenance",
+    "Rail Line Construction & Maintenance",
+    "Cost Estimating",
+    "Engineering, Procurement & Construction Management (EPCM)",
+    "Preliminary Engineering (FEED)",
+    "Project Management & Control (PMC)",
+    "Portfolio Delivery",
+    "Business Model Development",
+    "Greenfield & Brownfield Projects",
+    "Feasibility Studies",
+    "Conceptual Design",
   ];
 
   return (
@@ -25,25 +37,24 @@ const Services = () => {
         </p>
       </div>
 
-      <div className="relative h-[250px] sm:h-[350px] md:h-[400px] overflow-hidden rounded-xl md:rounded-2xl shadow-2xl mb-8 sm:mb-12">
-        {/* <Image
-          src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200"
+      <div className="relative overflow-hidden rounded-xl  mb-8 sm:mb-12">
+        <Image
+          src={ourservices}
           alt="Industrial facility"
-          width={24}
+          width={624}
           height={24}
-          className="w-full h-full object-cover"
-        /> */}
-        <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent" />
+          className="w-full h-full md:h-120 object-cover"
+        />
       </div>
 
       <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-shadow border-l-4 border-blue-600"
+            className="bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-900"
           >
             <div className="flex items-start gap-3">
-              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-900 rounded-full flex items-center justify-center shrink-0 mt-1">
                 <span className="text-white text-xs font-bold">✓</span>
               </div>
               <p className="text-sm sm:text-base text-gray-700 font-medium">
