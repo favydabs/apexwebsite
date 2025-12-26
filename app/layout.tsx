@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header"; 
-import "./globals.css"; 
+import Header from "@/components/Header";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Apex",
+  title: "Apex Energy",
   description: "Energy engineering and infrastructure",
+
+  icons: {
+    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

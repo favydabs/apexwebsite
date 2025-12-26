@@ -51,10 +51,10 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-blue-900"
+            className="bg-white p-4 sm:p-6 rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#2F7876]"
           >
             <div className="flex items-start gap-3">
-              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-900 rounded-full flex items-center justify-center shrink-0 mt-1">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-[#2F7876] rounded-full flex items-center justify-center shrink-0 mt-1">
                 <span className="text-white text-xs font-bold">✓</span>
               </div>
               <p className="text-sm sm:text-base text-gray-700 font-medium">

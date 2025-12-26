@@ -6,6 +6,10 @@ import Image from "next/image";
 import infrastructure from "@/public/infrastructure.jpg";
 import energysolution from "@/public/energysolution.jpg";
 import ourservices from "@/public/ourservices.jpg";
+import greenenergy1 from "@/public/greenenergy1.jpeg";
+import greenenergy2 from "@/public/greenenergy2.jpeg";
+import greenenergy3 from "@/public/greenenergy3.jpeg";
+import greenenergy4 from "@/public/greenenergy4.jpeg";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,6 +32,34 @@ const Home = () => {
       alt: "Energy infrastructure",
       title: "Infrastructure Development",
       description: "Building tomorrow's infrastructure today",
+    },
+    {
+      img: greenenergy1,
+      alt: "Solar energy",
+      title: "Solar Power",
+      description:
+        "Harnessing sunlight to generate clean and renewable energy.",
+    },
+    {
+      img: greenenergy2,
+      alt: "Wind energy",
+      title: "Wind Energy",
+      description:
+        "Using wind power to produce sustainable electricity with zero emissions.",
+    },
+    {
+      img: greenenergy3,
+      alt: "Hydro energy",
+      title: "Hydro Power",
+      description:
+        "Generating energy from water to support a greener environment.",
+    },
+    {
+      img: greenenergy4,
+      alt: "Green infrastructure",
+      title: "Sustainable Solutions",
+      description:
+        "Innovative green technologies for a cleaner and healthier future.",
     },
   ];
 
@@ -66,7 +98,7 @@ const Home = () => {
               height={24}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-transparent" />
 
             {/* Carousel Text Overlay */}
             <div className="absolute inset-0 flex items-center">
@@ -86,14 +118,14 @@ const Home = () => {
 
         <button
           onClick={prevSlide}
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 sm:p-3 rounded-full transition-all"
+          className=" cursor-pointer absolute left-2 sm:left-4 top-1/3 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 sm:p-3 rounded-full transition-all"
         >
           <ChevronLeft className="w-6 h-5 sm:w-6 sm:h-6 text-black" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 sm:p-3 rounded-full transition-all"
+          className="cursor-pointer absolute right-2 sm:right-4 top-1/3 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm p-2 sm:p-3 rounded-full transition-all"
         >
           <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-black" />
         </button>
@@ -113,7 +145,7 @@ const Home = () => {
 
       {/* Welcome Section */}
       <div className="text-center space-y-4 sm:space-y-6 px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-grey-900">
           WELCOME!
         </h2>
         <p className="text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -128,7 +160,7 @@ const Home = () => {
       {/* Vision & Mission */}
       <div className="grid md:grid-cols-2 gap-6 md:gap-8 px-4">
         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 sm:p-8 rounded-xl md:rounded-2xl shadow-lg">
-          <h3 className="text-2xl sm:text-3xl font-bold text-blue-900 mb-3 sm:mb-4">
+          <h3 className="text-2xl sm:text-3xl font-bold text-grey-900 mb-3 sm:mb-4">
             VISION
           </h3>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
@@ -138,8 +170,8 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-br from-indigo-50 to-indigo-50 p-6 sm:p-8 rounded-xl md:rounded-2xl shadow-lg">
-          <h3 className="text-2xl sm:text-3xl font-bold text-indigo-900 mb-3 sm:mb-4">
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 sm:p-8 rounded-xl md:rounded-2xl shadow-lg">
+          <h3 className="text-2xl sm:text-3xl font-bold text-grey-900 mb-3 sm:mb-4">
             MISSION
           </h3>
           <p className="text-sm sm:text-base text-gray-700 leading-relaxed">

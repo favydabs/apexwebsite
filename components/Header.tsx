@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import logo from "@/public/logo.png";
+import Image from "next/image";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,6 +13,7 @@ const Header = () => {
 
   const pages = [
     { name: "home", path: "/" },
+    { name: "about us", path: "/about" },
     { name: "services", path: "/services" },
     { name: "careers", path: "/careers" },
     { name: "contact", path: "/contact" },
@@ -26,44 +29,30 @@ const Header = () => {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3 sm:py-4">
+        <div className="flex items-center justify-between lg:justify-start py-3 sm:py-4">
+          {/* Logo - Always at start */}
           <Link href="/" className="flex items-center gap-2 sm:gap-4">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-900 rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-bold text-base sm:text-xl">
-                APEX
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-sm md:text-xl lg:text-2xl font-bold text-blue-900">
-                APEX ENERGY ENGINEERING & INFRASTRUCTURES LTD
-              </h1>
-            </div>
+            <Image
+              src={logo}
+              alt="Apex Logo"
+              width={294}
+              height={88}
+              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain"
+              priority
+            />
           </Link>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
-            <ul className="flex gap-1">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex flex-1 justify-center">
+            <ul className="flex gap-4 xl:gap-8">
               {pages.map((page) => (
                 <li key={page.path}>
                   <Link
                     href={page.path}
                     className={`px-6 py-3 text-sm font-medium capitalize transition-all rounded-lg block ${
                       isActivePage(page.path)
-                        ? "bg-blue-900 text-white shadow-lg"
-                        : "text-gray-700 hover:bg-blue-100"
+                        ? "bg-[#2F7876] text-white shadow-lg"
+                        : "text-gray-700 hover:bg-teal-50"
                     }`}
                   >
                     {page.name === "contact" ? "Contact Us" : page.name}
@@ -72,6 +61,19 @@ const Header = () => {
               ))}
             </ul>
           </nav>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors ml-auto"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -86,8 +88,8 @@ const Header = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`w-full px-4 py-3 text-sm font-medium capitalize transition-all rounded-lg text-left block ${
                     isActivePage(page.path)
-                      ? "bg-blue-900 text-white shadow-lg"
-                      : "text-gray-700 hover:bg-blue-100"
+                      ? "bg-[#2F7876] text-white shadow-lg"
+                      : "text-gray-700 hover:bg-teal-50"
                   }`}
                 >
                   {page.name === "contact" ? "Contact Us" : page.name}

@@ -41,7 +41,7 @@ const Careers = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-xl  shadow-sm overflow-hidden">
+      {/* <div className="bg-white rounded-xl  shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
@@ -81,7 +81,7 @@ const Careers = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

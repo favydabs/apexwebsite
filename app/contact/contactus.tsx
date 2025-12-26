@@ -1,7 +1,7 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import contactus from "@/public/contactus.jpg";
-
+import whatsapp from "@/public/whatsapp.png";
 const Contact = () => {
   return (
     <div className="space-y-6 sm:space-y-8 px-4">
@@ -18,8 +18,8 @@ const Contact = () => {
         <div className="space-y-4 sm:space-y-6">
           <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-blue-100 p-3 rounded-full">
-                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              <div className=" bg-teal-50 p-3 rounded-full">
+                <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-[#2F7876] " />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
@@ -34,15 +34,15 @@ const Contact = () => {
 
           <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-blue-100 p-3 rounded-full ">
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              <div className="bg-teal-50 p-3 rounded-full ">
+                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-[#2F7876] " />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
                   Email
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base break-all">
-                  alheri.ochoche@apexeng.com
+                  info@apexenergyeng.com
                 </p>
               </div>
             </div>
@@ -50,8 +50,8 @@ const Contact = () => {
 
           <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
             <div className="flex items-start gap-4">
-              <div className="bg-blue-100 p-3 rounded-full">
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
+              <div className="bg-teal-50 p-3 rounded-full">
+                <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#2F7876] " />
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
@@ -59,6 +59,31 @@ const Contact = () => {
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base">
                   +234 (0) 8065334947
+                </p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  +234 (0) 8072224440
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-5 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            <div className="flex items-start gap-4">
+              <div className="bg-teal-50 p-3 rounded-full">
+                <Image
+                  src={whatsapp}
+                  alt="whatsapp icon"
+                  width={24}
+                  height={24}
+                  className="text-[#2F7876]  object-contain"
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
+                  WhatsApp
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  +234 (0) 9078461028
                 </p>
               </div>
             </div>
